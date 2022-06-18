@@ -1,4 +1,4 @@
-const fetchData = () => {
+export const fetchData = () => {
   return fetch(
     "https://cors-anywhere.herokuapp.com/https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest",
     {
@@ -9,5 +9,3 @@ const fetchData = () => {
     }
   );
 };
-
-export default fetchData;

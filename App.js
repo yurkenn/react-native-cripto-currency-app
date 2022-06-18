@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Text, SafeAreaView, FlatList } from "react-native";
 import Item from "./Item";
-import fetchData from "./api";
+import { fetchData } from "./api";
 
 const App = () => {
   const [data, setData] = useState([]);

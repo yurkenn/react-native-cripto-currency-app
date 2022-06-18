@@ -8,12 +8,13 @@ const Item = ({ item }) => {
           source={{
             uri: `https://s2.coinmarketcap.com/static/img/coins/64x64/${item.id}.png`,
           }}
-          style={{ with: 64, height: 64 }}
+          style={styles.image}
         />
         <View>
           <Text>{item.symbol}</Text>
           <Text>{item.name}</Text>
           <Text>{item.quote.USD.price}$</Text>
+          <Text>{item.quote.USD.percent_change_24h}%</Text>
         </View>
       </View>
       <View style={styles.divider}></View>
@@ -25,9 +26,19 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: "row",
+    padding: 16,
+    alignItems: "center",
+  },
+  image: {
+    width: 64,
+    height: 64,
+    marginRight: 16,
+  },
+  text: {
+    fontSize: 16,
   },
   divider: {
-    flex: 1,
+    width: 1,
     height: 1,
     backgroundColor: "#ccc",
   },
