@@ -12,9 +12,11 @@ const Item = ({ item }) => {
         />
         <View style={styles.texts}>
           <Text>{item.symbol}</Text>
-          <Text>{item.name}</Text>
-          <Text>{item.quote.USD.price}$</Text>
-          <Text>{item.quote.USD.percent_change_24h}%</Text>
+          <Text style={{ fontSize: 18 }}>{item.name}</Text>
+          <Text style={{ fontWeight: "bold" }}>
+            {item.quote.USD.price.toFixed(2)}$
+          </Text>
+          <Text>{item.quote.USD.percent_change_24h.toFixed(2)}%</Text>
         </View>
       </View>
       <View style={styles.divider}></View>
