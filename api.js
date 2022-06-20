@@ -1,6 +1,6 @@
 export const fetchData = () => {
   return fetch(
-    "https://cors-anywhere.herokuapp.com/https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest",
+    "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest",
     {
       method: "GET",
       headers: {

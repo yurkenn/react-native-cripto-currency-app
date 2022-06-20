@@ -10,7 +10,7 @@ const Item = ({ item }) => {
           }}
           style={styles.image}
         />
-        <View>
+        <View style={styles.texts}>
           <Text>{item.symbol}</Text>
           <Text>{item.name}</Text>
           <Text>{item.quote.USD.price}$</Text>
@@ -26,7 +26,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: "row",
-    padding: 16,
+    paddingHorizontal: 16,
+    paddingVertical: 12,
     alignItems: "center",
   },
   image: {
@@ -34,13 +35,13 @@ const styles = StyleSheet.create({
     height: 64,
     marginRight: 16,
   },
-  text: {
-    fontSize: 16,
+  texts: {
+    marginStart: 16,
   },
   divider: {
-    width: 1,
     height: 1,
-    backgroundColor: "#ccc",
+    backgroundColor: "#eee",
+    marginStart: 96,
   },
 });
 
